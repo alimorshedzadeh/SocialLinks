@@ -12,12 +12,11 @@ function App() {
   return (
     <Provider store={myStore}>
       <BrowserRouter>
-        <ThemeContainer>
+        
           <Routes>
-            <Route path="/user/settings" element={<UserSettingPage />} />
+            <Route path="/user/settings" element={<ThemeContainer ><UserSettingPage /></ThemeContainer>} />
             <Route exact path="/" element={<Redirect to="/user/settings" />} />
           </Routes>
-        </ThemeContainer>
       </BrowserRouter>
     </Provider>
   );

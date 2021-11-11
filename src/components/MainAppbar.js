@@ -8,25 +8,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkSwitch from './DarkSwitch'
 import Avatar from '@mui/material/Avatar';
+import SearchIcon from '@mui/icons-material/Search';
 export default function MainAppbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" color="transparent" sx={{boxShadow:'none'}}>
+      <AppBar position="absolute" color="transparent" sx={{ boxShadow: 'none' }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-             <MenuIcon  color="commen"/>
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <DarkSwitch/>
-          <Avatar sx={{mr:2}} src="/avatar.jpg">L</Avatar>
+         <Typography sx={{flexGrow:1}} color="text.secondary"> <SearchIcon fontSize="small"/></Typography>
+          <DarkSwitch />
+          <Avatar sx={{ ml: 2 }} src="/avatar.jpg">L</Avatar>
         </Toolbar>
       </AppBar>
     </Box>
